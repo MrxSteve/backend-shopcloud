@@ -1,0 +1,6 @@
+CREATE DATABASE notification_db;
+CREATE DATABASE user_db;
+CREATE DATABASE inventory_db;
+CREATE DATABASE order_db;
+CREATE DATABASE report_db;
+CREATE DATABASE config_db;
