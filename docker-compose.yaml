@@ -57,6 +57,22 @@ services:
     networks:
       - shopcloud-net
 
+  notification-mservice:
+    build:
+      context: ./microservices/notification-mservice
+      dockerfile: Dockerfile
+    container_name: shopcloud-notification-mservice
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - rabbitmq
+    env_file: 
+      - ./microservices/notification-mservice/.env
+    ports:
+      - "8081:8081"
+    networks:
+      - shopcloud-net
+
 networks:
   shopcloud-net:
     driver: bridge
