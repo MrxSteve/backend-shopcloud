@@ -3,7 +3,6 @@ package com.shopcloud.user_mservice.infra.adapters.out.sql.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Set;
 import java.util.UUID;
 
 @NoArgsConstructor @AllArgsConstructor
@@ -15,9 +14,6 @@ public class RoleEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(nullable = false, unique = true, length = 30)
+    @Column(name = "name", nullable = false, unique = true, length = 30)
     private String name;
-
-    @ManyToMany(mappedBy = "roles")
-    private Set<UserEntity> users;
 }

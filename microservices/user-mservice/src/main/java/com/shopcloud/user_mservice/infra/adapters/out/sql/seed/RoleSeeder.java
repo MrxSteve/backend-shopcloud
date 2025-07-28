@@ -13,7 +13,7 @@ import java.util.List;
 @Component
 @Slf4j
 @RequiredArgsConstructor
-public class RoleSeeder implements ApplicationRunner {
+public class RoleSeeder implements ApplicationRunner{
     private final RoleJpaRepository roleJpaRepository;
 
     @Override
